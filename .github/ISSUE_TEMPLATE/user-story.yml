@@ -1,0 +1,35 @@
+name: User Story
+description: Eine Anforderung aus Sicht einer Person, die das Werkzeug benutzt
+title: "Als ... möchte ich ..., damit ..."
+labels: [story]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: Story
+      description: Als <Rolle> möchte ich <Funktion>, damit <Nutzen>.
+    validations:
+      required: true
+  - type: textarea
+    id: kriterien
+    attributes:
+      label: Akzeptanzkriterien
+      description: Prüfbare Aussagen, je eine Checkbox. Mindestens drei.
+      value: |
+        - [ ] Wenn ..., dann ...
+        - [ ] Wenn ..., dann ...
+        - [ ] Wenn ..., dann ...
+    validations:
+      required: true
+  - type: textarea
+    id: sicherheit
+    attributes:
+      label: Sicherheit und Datenschutz
+      description: Welche Eingaben oder Daten sind betroffen? "Keine" ist eine gültige Antwort.
+    validations:
+      required: true
+  - type: dropdown
+    id: punkte
+    attributes:
+      label: Schätzung in Punkten
+      options: ["1", "2", "3", "5"]
